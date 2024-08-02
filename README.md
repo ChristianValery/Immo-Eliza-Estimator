@@ -80,7 +80,7 @@ We used *cross-validation* without *hyperparameter tuning* to evaluate and compa
 
 
 <p align="center">
-  <img src = "images/regressors_comparison.png" width=400>
+  <img src = "images/regressors_comparison.png" width=500>
 </p>
 
 
