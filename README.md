@@ -55,6 +55,34 @@ In the following, we will detail the work carried out in the last two phases of 
 
 ## Modeling
 
+The modeling phase started with a raw DataFrame consisting of 118714 rows and 32 columns. Before the modeling itself, we have the following preprocessing operations.
+
+1. **Data cleaning** (data validation, addressing missing data).
+
+2. **Features engineering**:
+
+    - *Lasso regression* for feature selection;
+
+    - *ColumnTransformer*, *RobustScaler*, *OneHotEncoder* and *OrdinalEncoder* for feature transformation.
+
+
+After the preprocessing step, we tried a model with multilinear regression, as well as other linear models such as Ridge and Lasso regressions. But, the *R2-score* did not exceed 0.5 and the *Mean Absolute Error* was above 150,000 euros. We then turned to scikit-learn **ensemble methods** and to **Extreme Gradient Boosting Regressor (XGBoost)**.
+
+We used *cross-validation* without *hyperparameter tuning* to evaluate and compare the models. With this in mind, the diagram below provides an overview of the distribution of the R2-score of the following four models:
+
+1. Gradient Boosting Regressor (GBRegressor);
+
+2. Histogram Gradient Boosting Regressor (HGBRegressor); 
+
+3. Extreme Gradient Boosting Regressor (XGBRegressor);
+
+4. Random Forest Regressor.
+
+
+<p align="center">
+  <img src = "images/regressors_comparison.png" width=600>
+</p>
+
 
 
 ## Deployment
@@ -62,6 +90,8 @@ In the following, we will detail the work carried out in the last two phases of 
 
 
 ## Technology
+
+The main tools we used in this project are the following.
 
 <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a>
 
