@@ -83,7 +83,7 @@ We used *cross-validation* without *hyperparameter tuning* to evaluate and compa
   <img src = "images/regressors_comparison.png" width=500>
 </p>
 
-
+Each of these four models performs better than the linear models we tested. In the end, we focused on Histogram Gradient, Extreme Gradient, and Random Forest Regressors. 
 
 ## Deployment
 
