@@ -42,13 +42,13 @@ The project was organised in four phases:
 3. Modeling (Machine learning);
 4. Deployment.
 
-The first phase consisted of scraping the website of the famous company [**immoweb**](https://www.immoweb.be/en) to create a relevant dataset of real estate properties in Belgium. The data collected were stored in a structured manner into a json file.
+The first phase consisted of scraping the website of the famous company [**immoweb**](https://www.immoweb.be/en) to create a relevant dataset of real estate properties in Belgium. The data collected were stored in a structured manner as a json file.
 
-In the second phase of the project, the json file was conveted into a pandas DataFrame. The latter was cleaned to perform an exploratory data analysis and to make visualizations. This work allowed us to better understand the database and the field of real estate. So we were better equipped for modeling.
+In the second phase of the project, the json file was conveted into a pandas DataFrame. The latter was then cleaned to perform an exploratory data analysis and to make insightful visualizations. This work allowed us to have a better understanding of the database and the field of real estate. So we were equipped for modeling.
 
-The challenge of the third phase was to study different machine learning models and choose the best one for the situation.
+The challenge of the third phase was to study different machine learning models, choose the best one for the situation, and trained it.
 
-In the fourth and final phase, it was about designing a basic web application and deploying it.
+The aim of the fourth and final phase was to design and deploy a basic web application using the previously trained model.
 
 In the following, we will detail the work carried out in the last two phases of the project.
 
@@ -63,6 +63,13 @@ In the following, we will detail the work carried out in the last two phases of 
 
 ## Technology
 
+<a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a>
+
+<a href="https://pandas.pydata.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg" alt="pandas" width="40" height="40"/></a>
+  
+  <a href="https://scikit-learn.org/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="scikit_learn" width="40" height="40"/>
+  
+  </a> <a href="https://seaborn.pydata.org/" target="_blank" rel="noreferrer"> <img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" alt="seaborn" width="40" height="40"/> </a> </p>
 
 
 ## Acknowledgments
