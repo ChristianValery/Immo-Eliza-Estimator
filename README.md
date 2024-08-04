@@ -55,7 +55,7 @@ In the following, we will detail the work carried out in the last two phases of 
 
 ## Modeling
 
-The modeling phase started with a raw DataFrame consisting of 118 714 rows and 32 columns. Before the modeling itself, we have the following preprocessing operations.
+The modeling phase started with a raw DataFrame consisting of 118 714 rows and 32 columns. Before the modeling itself, we performed the following preprocessing operations.
 
 1. **Data cleaning** (data validation, addressing missing data).
 
