@@ -114,4 +114,4 @@ The main tools we used in this project are the following:
 
 ## Acknowledgments
 
-All my thanks to my coaches at BeCode, Antoine and Denis, for the flawless coaching. Thank you also to my fellow trainees for their support and for the many sessions of mutual enrichment.
+All my thanks to my coaches at BeCode, Antoine and Denis, for the flawless and inspiring coaching. Thank you also to my fellow trainees for their support and for the many sessions of mutual enrichment.
