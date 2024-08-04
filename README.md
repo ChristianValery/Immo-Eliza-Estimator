@@ -89,12 +89,12 @@ For each model, using **RandomizedSearchCV**, we performed a an hyper-parameter 
 
 |  | **HGB Regressor** | **XGB Regressor** | **RF Regressor** |
 |--|-------------------|-------------------|------------------|
-| R2-score (train) | 0.85 | 0.84 | 0.85 |
-| R2-score (test)  | 0.75 | 0.75 | 0.75 |
-| 95% Confindence interval of the score | [0.74, 0.75] | [0.74, 0.75] | [0.72, 0.74] |
-| Mean Absolute Error | 53 224 € | 53 502 € | 53 392 € |
-| Root Mean Squared Error | 75 744 € | 76 148 € | 76 120 € |
-| Median Absolute Error | 36 270 € | 36 583 € | 36 798 € |
+| R2-score (train) | 0.82 | 0.87 | 0.85 |
+| R2-score (test)  | 0.75 | 0.76 | 0.75 |
+| 95% Confindence interval of the score | [0.74, 0.75] | [0.73, 0.76] | [0.73, 0.74] |
+| Mean Absolute Error | 54 499 € | 52 647 € | 54 156 € |
+| Root Mean Squared Error | 76 921 € | 75 060 € | 76 871 € |
+| Median Absolute Error | 37 802 € | 36 507 € | 37 397 € |
 
 
 ## Deployment

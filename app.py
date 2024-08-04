@@ -192,7 +192,7 @@ with open("models/predictor_rfr.pkl", "rb") as f:
 
 models = [(hgb_regressor, hgbr_metrics), (xgb_regressor, xgbr_metrics), (rf_regressor, rfr_metrics)]
 
-model, metrics = models[0]
+model, metrics = models[1]
 
 
 X_property = pre.transform(df_property)

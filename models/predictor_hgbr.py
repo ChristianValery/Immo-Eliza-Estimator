@@ -17,7 +17,7 @@ from time import time
 
 start = time()
 
-with open("features_target_wo.pkl", "rb") as f:
+with open("models/features_target_wo.pkl", "rb") as f:
     df, pre, X, y = pickle.load(f)
 
 
@@ -78,8 +78,7 @@ print(f"Root Mean Squared Error: {root_mean_squared_error(y_test, y_pred)}")
 print(f"Median Absolute Error: {median_absolute_error(y_test, y_pred)}")
 
 
-
-with open("predictor_hgbr.pkl", "wb") as f:
+with open("models/predictor_hgbr.pkl", "wb") as f:
     pickle.dump((hgb_regressor, model_metrics), f, protocol=5)
 
 
