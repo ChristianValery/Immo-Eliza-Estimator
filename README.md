@@ -55,7 +55,7 @@ In the following, we will detail the work carried out in the last two phases of 
 
 ## Modeling
 
-The modeling phase started with a raw DataFrame consisting of 118714 rows and 32 columns. Before the modeling itself, we have the following preprocessing operations.
+The modeling phase started with a raw DataFrame consisting of 118 714 rows and 32 columns. Before the modeling itself, we have the following preprocessing operations.
 
 1. **Data cleaning** (data validation, addressing missing data).
 
@@ -66,9 +66,9 @@ The modeling phase started with a raw DataFrame consisting of 118714 rows and 32
     - *ColumnTransformer*, *RobustScaler*, *OneHotEncoder* and *OrdinalEncoder* for feature transformation.
 
 
-After the preprocessing step, we tried a model with multilinear regression, as well as other linear models such as Ridge and Lasso regressions. But, the *R2-score* did not exceed 0.5 and the *Mean Absolute Error* was above 150,000 euros. We then turned to scikit-learn **ensemble methods** and to **Extreme Gradient Boosting Regressor (XGBoost)**.
+After the preprocessing step, we ended up with a dataset consisting of 56 307 records and 16 features plus the price (the target). We then tried multilinear regression, as well as other linear models such as Ridge and Lasso regressions. But, the *R2-score* did not exceed 0.5 and the *Mean Absolute Error* was above 150,000 euros. We then turned to scikit-learn **ensemble methods** and to **Extreme Gradient Boosting Regressor (XGBoost)**.
 
-We used *cross-validation* without *hyperparameter tuning* to evaluate and compare the models. With this in mind, the diagram below provides an overview of the distribution of the R2-score of the following four models:
+We used *cross-validation* without *hyperparameter tuning* to evaluate and compare the models. The diagram below provides an overview of the distribution of the R2-score of the following four models:
 
 1. Gradient Boosting Regressor (GBRegressor);
 
@@ -76,18 +76,32 @@ We used *cross-validation* without *hyperparameter tuning* to evaluate and compa
 
 3. Extreme Gradient Boosting Regressor (XGBRegressor);
 
-4. Random Forest Regressor.
+4. Random Forest Regressor (RFRegressor).
 
 
 <p align="center">
   <img src = "images/regressors_comparison.png" width=500>
 </p>
 
-Each of these four models performs better than the linear models we tested. In the end, we focused on Histogram Gradient, Extreme Gradient, and Random Forest Regressors. 
+Each of these four models performs better than the linear models we tested. In the end, we focused on Histogram Gradient, Extreme Gradient, and Random Forest Regressors.
+
+For each model, using **RandomizedSearchCV**, we performed a an hyper-parameter search with cross validation, and trained the model with the best parameters. The following table provides an overview of the performance metrics obtained.
+
+|  | **HGB Regressor** | **XGB Regressor** | **RF Regressor** |
+|--|-------------------|-------------------|------------------|
+| R2-score (train) | 0.85 | 0.84 | 0.85 |
+| R2-score (test)  | 0.75 | 0.75 | 0.75 |
+| 95% Confindence interval of the score | [0.74, 0.75] | [0.74, 0.75] | [0.72, 0.74] |
+| Mean Absolute Error | 53 224 € | 53 502 € | 53 392 € |
+| Root Mean Squared Error | 75 744 € | 76 148 € | 76 120 € |
+| Median Absolute Error | 36 270 € | 36 583 € | 36 798 € |
+
 
 ## Deployment
 
+We used **streamlit** to design a web application based on one of the three models trained. The application itself was deployed on the [**render.com**](https://render.com/) platform at the following address:
 
+[https://immo-eliza-estimator.onrender.com/](https://immo-eliza-estimator.onrender.com/)
 
 ## Technology
 
