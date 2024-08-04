@@ -20,7 +20,7 @@
 - [Introduction](#introduction)
 - [Description](#description)
 - [Modeling](#modeling)
-- [Deployment](#deployement)
+- [Deployment](#deployment)
 - [Technology](#technology)
 - [Acknowledgments](#acknowledgments)
 
