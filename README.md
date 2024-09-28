@@ -2,8 +2,8 @@
 # Immo-Eliza-Estimator
 
 <p align="center">
-  [Immo-Eliza-Estimator](https://immo-eliza-estimator.onrender.com/)
-    ![Immo-Eliza-Estimator](images/real_estate_agent.png)
+  <a href="https://immo-eliza-estimator.onrender.com/">
+    <img src="images/real_estate_agent.png" alt="Immo-Eliza-Estimator">
   </a>
 </p>
 
