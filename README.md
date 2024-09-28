@@ -20,7 +20,6 @@
 - [Modeling](#modeling)
 - [Deployment](#deployment)
 - [Technology](#technology)
-- [Directory Structure](#directory_structure)
 - [Acknowledgments](#acknowledgments)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -105,32 +104,6 @@ The main tools we used in this project are the following:
 |:------:|:------:|:------:|------|:------:|:------:|:------:|
 | [![python](https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg)](https://www.python.org) | [![pandas](https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg)](https://pandas.pydata.org/) | [![numpy](https://numpy.org/images/logo.svg)](https://numpy.org/) | [![scikit_learn](https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg)](https://scikit-learn.org/) | [![matplotlib](https://matplotlib.org/_static/images/documentation.svg)](https://matplotlib.org/) | [![seaborn](https://seaborn.pydata.org/_images/logo-mark-lightbg.svg)](https://seaborn.pydata.org/) | [![streamlit](https://docs.streamlit.io/logo.svg)](https://docs.streamlit.io/) |
 
-
-## Directory Structure
-
-IMMO-ELIZA-ESTIMATOR
-│       ├───.gitignore
-│       ├───app.py
-│       ├───directory_structure.txt
-│       ├───Dockerfile
-│       ├───README.md
-│       └───requirements.txt
-│   
-├───images
-│       ├───euro.png
-│       ├───real_estate_agent.png
-│       └───regressors_comparison.png
-│       
-└───models
-        ├───features_target.pkl
-        ├───features_target_wo.pkl
-        ├───predictor_hgbr.pkl
-        ├───predictor_hgbr.py
-        ├───predictor_rf.py
-        ├───predictor_rfr.pkl
-        ├───predictor_xgbr.pkl
-        ├───predictor_xgbr.py
-        └───preprocessing.py
 
 ## Acknowledgments
 
