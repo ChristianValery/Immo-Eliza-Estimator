@@ -1,17 +1,15 @@
 
+# Immo-Eliza-Estimator
 
-<h1 align="center"> Immo-Eliza-Estimator </h1> <br>
 <p align="center">
-  <a href="https://immo-eliza-estimator.onrender.com/">
-    <img alt="Immo-Eliza-Estimator" title="Immo-Eliza-Estimator" src="images/real_estate_agent.png" width="100">
+  [Immo-Eliza-Estimator](https://immo-eliza-estimator.onrender.com/)
+    ![Immo-Eliza-Estimator](images/real_estate_agent.png)
   </a>
 </p>
 
 <p align="center">
   A web application for individuals and real estate agents.
 </p>
-
-
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -22,6 +20,7 @@
 - [Modeling](#modeling)
 - [Deployment](#deployment)
 - [Technology](#technology)
+- [Directory Structure](#directory_structure)
 - [Acknowledgments](#acknowledgments)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -31,7 +30,6 @@
 Price predictors are one of the main types of tools that can be designed with artificial intelligence and machine learning. As part of our training at BeCode, we had the opportunity to design such a model and deploy it as a web application.
 
 Here we wish to share the results of this enriching and fruitful experience.
-
 
 ## Description
 
@@ -52,7 +50,6 @@ The aim of the fourth and final phase was to design and deploy a basic web appli
 
 In the following, we will detail the work carried out in the last two phases of the project.
 
-
 ## Modeling
 
 The modeling phase started with a raw DataFrame consisting of 118 714 rows and 32 columns. Before the modeling itself, we performed the following preprocessing operations.
@@ -65,23 +62,21 @@ The modeling phase started with a raw DataFrame consisting of 118 714 rows and 3
 
     - *ColumnTransformer*, *RobustScaler*, *OneHotEncoder* and *OrdinalEncoder* for feature transformation.
 
-
 After the preprocessing step, we ended up with a dataset consisting of 56 307 records and 16 features plus the price (the target). We then tried multilinear regression, as well as other linear models such as Ridge and Lasso regressions. But, the *R2-score* did not exceed 0.5 and the *Mean Absolute Error* was above 150,000 euros. We then turned to scikit-learn **ensemble methods** and to **Extreme Gradient Boosting Regressor (XGBoost)**.
 
 We used *cross-validation* without *hyperparameter tuning* to evaluate and compare the models. The diagram below provides an overview of the distribution of the R2-score of the following four models:
 
 1. Gradient Boosting Regressor (GBRegressor);
 
-2. Histogram Gradient Boosting Regressor (HGBRegressor); 
+2. Histogram Gradient Boosting Regressor (HGBRegressor);
 
 3. Extreme Gradient Boosting Regressor (XGBRegressor);
 
 4. Random Forest Regressor (RFRegressor).
 
-
-<p align="center">
-  <img src = "images/regressors_comparison.png" width=500>
-</p>
+<div align="center">
+  ![Comparison of Regressors](images/regressors_comparison.png)
+</div>
 
 Each of these four models performs better than the linear models we tested. In the end, we focused on Histogram Gradient, Extreme Gradient, and Random Forest Regressors.
 
@@ -96,7 +91,6 @@ For each model, using **RandomizedSearchCV**, we performed a an hyper-parameter 
 | Root Mean Squared Error | 76 921 € | 75 060 € | 76 871 € |
 | Median Absolute Error | 37 802 € | 36 507 € | 37 397 € |
 
-
 ## Deployment
 
 We used **streamlit** to design a web application based on one of the three models trained. The application itself was deployed on the [**render.com**](https://render.com/) platform at the following address:
@@ -109,8 +103,34 @@ The main tools we used in this project are the following:
 
 | python | pandas | numpy | scikit-learn | matplotlib | seaborn | streamlit |
 |:------:|:------:|:------:|------|:------:|:------:|:------:|
-| <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> | <a href="https://pandas.pydata.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg" alt="pandas" width="40" height="40"/></a> | <a href="https://numpy.org/" target="_blank" rel="noreferrer"> <img src="https://numpy.org/images/logo.svg" alt="numpy" width="40" height="40"/></a> | <a href="https://scikit-learn.org/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="scikit_learn" width="40" height="40"/> | <a href="https://matplotlib.org/" target="_blank" rel="noreferrer"> <img src="https://matplotlib.org/_static/images/documentation.svg" alt="matplotlib" width="40" height="30"/></a> | </a> <a href="https://seaborn.pydata.org/" target="_blank" rel="noreferrer"> <img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" alt="seaborn" width="40" height="40"/></a> | </a> <a href="https://docs.streamlit.io/" target="_blank" rel="noreferrer"> <img src="https://docs.streamlit.io/logo.svg" alt="streamlit" width="40" height="40"/></a> |
+| [![python](https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg)](https://www.python.org) | [![pandas](https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg)](https://pandas.pydata.org/) | [![numpy](https://numpy.org/images/logo.svg)](https://numpy.org/) | [![scikit_learn](https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg)](https://scikit-learn.org/) | [![matplotlib](https://matplotlib.org/_static/images/documentation.svg)](https://matplotlib.org/) | [![seaborn](https://seaborn.pydata.org/_images/logo-mark-lightbg.svg)](https://seaborn.pydata.org/) | [![streamlit](https://docs.streamlit.io/logo.svg)](https://docs.streamlit.io/) |
 
+
+## Directory Structure
+
+IMMO-ELIZA-ESTIMATOR
+│       ├───.gitignore
+│       ├───app.py
+│       ├───directory_structure.txt
+│       ├───Dockerfile
+│       ├───README.md
+│       └───requirements.txt
+│   
+├───images
+│       ├───euro.png
+│       ├───real_estate_agent.png
+│       └───regressors_comparison.png
+│       
+└───models
+        ├───features_target.pkl
+        ├───features_target_wo.pkl
+        ├───predictor_hgbr.pkl
+        ├───predictor_hgbr.py
+        ├───predictor_rf.py
+        ├───predictor_rfr.pkl
+        ├───predictor_xgbr.pkl
+        ├───predictor_xgbr.py
+        └───preprocessing.py
 
 ## Acknowledgments
 
